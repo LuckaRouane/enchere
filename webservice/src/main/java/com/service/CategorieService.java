@@ -16,6 +16,10 @@ public class CategorieService {
     @Autowired
     CategorieRepository repository;
 
+    public void saveCategorie(Categorie categorie){
+        repository.save(categorie);
+    }
+
     public Object getAllCategorie(){
         try {
             final List<Categorie> categorie = new ArrayList<Categorie>();
